@@ -1,51 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <h1>guess the number</h1>
+<!DOCTYPE html> 
+<html> 
 
-<input id="guessnumber">
-<button onclick="check()">check</button>
+<head> 
+	<title>Age Calculator</title> 
+	<link rel="stylesheet"
+		href="style.css" /> 
+</head> 
 
-<p id="result">you are Right/Wrong</p>
-<p id="score">score:10</p>
-<script>
-    var guessnumber=document.getElementById("guessnumber")
-    var result=document.getElementById("result")
-    var score=document.getElementById("score")
-    var randomnumber=Math.floor(Math.random()*10)+1
-    var totscore=10
-    function check()
-    {
-        var enterednumber=guessnumber.value
-        if(randomnumber==enterednumber)
-        {
-            console.log("Right")
-            result.textContent="Right"
-            alert("you won")
-    }
-    else {
-        totscore=totscore-1
-        score.textContent="score:"+totscore
-        result.textContent="Wrong"
-    }
-}
+<body> 
+	<div class="card"> 
+		<header> 
+			<h1>AGE CALCULATOR</h1> 
+		</header> 
 
+		<div> 
+			<label>Enter your Date of Birth</label> 
 
+			<input id="inputDob"
+				type="date"
+				value="2000-01-01" /> 
+		</div> 
+		<br>
+		<div> 
+			<label>Current Date</label><br> 
+			<input id="cdate"
+				type="date"
+				value="" /> 
+		</div> 
+		<br /> 
 
-</script>
-    
-</body>
+		<button type="button"
+				onclick="getDOB()"> 
+			Calculate 
+		</button> 
+		<br /> 
+		<div id="currentAge"></div> 
+		<script src="script.js"></script> 
+	</div> 
+</body> 
+
 </html>
-
-    
- 
- 
- 
- 
-       
